@@ -15,4 +15,8 @@
 //     return view('welcome');
 // });
 
-Route::get('/', 'DashboardController@index' ); //memanggil function index di DashboardCotroller
+Route::get('/', 'DashboardController@index' )->name('dashboard'); //memanggil function index di DashboardCotroller
+
+Auth::routes(['register' => false]);
+
+Route::resource('products', 'ProductController');
