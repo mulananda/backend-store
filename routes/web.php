@@ -17,6 +17,10 @@
 
 Route::get('/', 'DashboardController@index' )->name('dashboard'); //memanggil function index di DashboardCotroller
 
-Auth::routes(['register' => false]);
+Auth::routes(['register' => false]); //disable user register
 
+Route::get('products/{id}/gallery', 'ProductController@gallery')
+    ->name('products.gallery');
 Route::resource('products', 'ProductController');
+
+Route::resource('product-galleries', 'ProductGalleryController');

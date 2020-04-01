@@ -19,6 +19,7 @@ class Product extends Model
 
     public function galleries()
     {
-        //return $this->hasMany('App\Comment', 'foreign_key', 'local_key');
+        // relasi ProductGallery dengan product
+        return $this->hasMany(ProductGallery::class, 'products_id');
     }
 }
