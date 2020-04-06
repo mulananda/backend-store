@@ -33,9 +33,11 @@
                     <th>Harga</th>
                 </tr>
                  @foreach ($item->details as $detail)
+                 <tr>
                      <td>{{ $detail->product->name }}</td>
                      <td>{{ $detail->product->type }}</td>
                      <td>${{ $detail->product->price }}</td>
+                  </tr>
                  @endforeach
             </table>
         </td>
